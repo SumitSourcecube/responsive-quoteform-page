@@ -1,6 +1,8 @@
 .quote-form-container {
-    width: 1440px;
-    height: 606px;
+    // width: 1440px;
+    width: 100vw;
+    // height: 606px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     background: #003CA2;
@@ -8,15 +10,20 @@
     overflow-y: hidden;
 
     @media screen and (max-width: 850px) {
-        width: 744px;
-        height: 953px;
+        min-width: 744px;
+        width: auto;
+        min-height: 953px;
+        height: auto;
         background: #F6FAFF;
         justify-content: center;
     }
 
     @media screen and (max-width: 450px) {
-        width: 358px;
-        height: 1023px;
+        min-width: 358px;
+        // height: 1023px;
+        width: auto;
+        min-height: 953px;
+        height: auto;
         background: #F6FAFF;
         justify-content: center;
     }
@@ -25,6 +32,7 @@
         width: auto;
         height: auto;
         display: flex;
+        align-items: center;
         gap: 36px;
 
         @media screen and (max-width: 850px) {
@@ -37,8 +45,16 @@
             flex-direction: column;
             align-items: center;
         }
+        @media screen and (max-width: 1000px) {
+            height: 923px;
+            display: contents;
+            // flex-direction: column;
+            // gap: 20px;
+            // align-items: center;
+        }
         @media screen and (max-width: 450px) {
             height: 923px;
+            display: flex;
             flex-direction: column;
             align-items: center;
         }
@@ -46,7 +62,9 @@
 
     .quote-form-image{
         width: 585px;
+        // width: auto;
         height: 716px;
+        // height: auto;
         border-radius: 4px;
         background-image: url('../../assets/images/img-1.png');
 
@@ -95,12 +113,19 @@
             gap: 36px;
             border: 1px solid #F1F1F1;
         }
+        @media screen and (max-width: 745px) {
+            position: unset;
+            width: auto;
+            gap: 24px;
+            height: 598px;
+        }
         @media screen and (max-width: 450px) {
             position: unset;
             width: 328px;
             gap: 24px;
             height: 598px;
         }
+       
     }
 
     .quote-form-header {
@@ -118,6 +143,19 @@
         font-weight: 700;
         line-height: 33.89px;
         color: #1C244B;
+
+        @media screen and (max-width: 1120px) {
+            // display: none;
+            font-size: 24px;
+        }
+        @media screen and (max-width: 1020px) {
+            // display: none;
+            font-size: 20px;
+        }
+        @media screen and (max-width: 850px) {
+            // display: none;
+            font-size: 28px;
+        }
     }
 
     #form-header-text2 {
@@ -126,6 +164,18 @@
         line-height: 22.59px;
         color: #172640;
 
+        @media screen and (max-width: 1120px) {
+            // display: none;
+            font-size: 14px;
+        }
+        @media screen and (max-width: 1020px) {
+            // display: none;
+            font-size: 12px;
+        }
+        @media screen and (max-width: 850px) {
+            // display: none;
+            font-size: 18px;
+        }
         @media screen and (max-width: 450px) {
             display: none;
         }
@@ -135,6 +185,7 @@
         width: auto;
         height: auto;
         display: flex;
+        // flex-wrap: wrap;
         flex-direction: column;
         gap: 36px;
 
@@ -143,6 +194,9 @@
             width: auto;
             min-height: 540px;
             height: auto;
+        }
+        @media screen and (max-width: 370px) {
+            width: 90%;
         }
     }
 
@@ -158,9 +212,15 @@
     .form-name, .form-email-phone {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0 16px;
-        width: 616px;
+        gap: 10px 16px;
+        // width: 616px;
+        width: auto;
         height: auto;
+
+        @media screen and (max-width: 1320px) {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
         @media screen and (max-width: 450px) {
             display: none;
         }
