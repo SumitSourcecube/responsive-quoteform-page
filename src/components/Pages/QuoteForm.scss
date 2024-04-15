@@ -1,0 +1,237 @@
+.quote-form-container {
+    width: 1440px;
+    height: 606px;
+    display: flex;
+    justify-content: center;
+    background: #003CA2;
+    gap: 10px;
+    overflow-y: hidden;
+
+    @media screen and (max-width: 850px) {
+        width: 744px;
+        height: 953px;
+        background: #F6FAFF;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 450px) {
+        width: 358px;
+        height: 1023px;
+        background: #F6FAFF;
+        justify-content: center;
+    }
+
+    .quote-form-card {
+        width: auto;
+        height: auto;
+        display: flex;
+        gap: 36px;
+
+        @media screen and (max-width: 850px) {
+            width: 678PX;
+            height: 613px;
+            padding: 33px 31px 33px 31px;
+            gap: 10px;
+            border-radius: 9px;
+            border: 1px;
+            flex-direction: column;
+            align-items: center;
+        }
+        @media screen and (max-width: 450px) {
+            height: 923px;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .quote-form-image{
+        width: 585px;
+        height: 716px;
+        border-radius: 4px;
+        background-image: url('../../assets/images/img-1.png');
+
+        @media screen and (max-width: 850px) {
+            width: 744px;
+            height: 506px;
+            border-radius: 4px;
+            background-color: #003CA3;
+            background-image: url(../../assets/images/img-2.png);
+        }
+        @media screen and (max-width: 450px) {
+            width: 326px;
+            height: 289px;
+            background: #003CA2;
+            background-image: url(../../assets/images/img-3.png);
+        }
+    }
+
+    .quote-form-div {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 850px) {
+            position: absolute;
+            bottom: 80px;
+        }
+        @media screen and (max-width: 450px) {
+            position: unset;
+        }
+    }
+
+    .quote-form {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #ffff;
+        gap: 32px;
+        padding: 40px 31px 40px 31px;
+        border-radius: 9px;
+
+        @media screen and (max-width: 850px) {
+            width: 616px;
+            height: auto;
+            gap: 36px;
+            border: 1px solid #F1F1F1;
+        }
+        @media screen and (max-width: 450px) {
+            position: unset;
+            width: 328px;
+            gap: 24px;
+            height: 598px;
+        }
+    }
+
+    .quote-form-header {
+        width: fit-content;
+        height: fit-content;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px 0;
+    }
+
+    #form-header-text {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 33.89px;
+        color: #1C244B;
+    }
+
+    #form-header-text2 {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22.59px;
+        color: #172640;
+
+        @media screen and (max-width: 450px) {
+            display: none;
+        }
+    }
+
+    .form-input{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+
+        @media screen and (max-width: 450px){
+            min-width: 328px;
+            width: auto;
+            min-height: 540px;
+            height: auto;
+        }
+    }
+
+    .form-text-inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .form-fullname, .form-email, .form-phone {
+        display: none;
+    }
+    .form-name, .form-email-phone {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 16px;
+        width: 616px;
+        height: auto;
+        @media screen and (max-width: 450px) {
+            display: none;
+        }
+    }
+    .form-fisrt-name, .form-last-name, .form-email-in, .form-phone-in{
+        width: 300px;
+    }
+    .form-file-input {
+        width: 328px;
+        height: 64px;
+        border-radius: 8px;
+        border: 1px dashed #4475F2;
+        display: none;
+
+        @media screen and (max-width: 450px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .form-file-input-button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 11px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .form-file-input-button-text {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25.2px;
+        color: #4475F2;
+    }
+
+    .form-upload {
+        width: fit-content;
+        height: auto;
+        padding: 11px 14px 11px 14px;
+        border-radius: 4px;
+        background: #E8E9EA;
+        cursor: pointer;
+
+        @media screen and (max-width: 450px) {
+            display: none;
+        }
+    }
+
+    .form-upload-button {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.94px;
+        border: none;
+        color:  #555E6D;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .form-submit-button {
+        display: flex;
+        justify-content: center;
+    }
+
+    
+
+    @media screen and (max-width: 450px) {
+       .form-fullname, .form-phone, .form-email {
+        display: block;
+       }
+    }
+}
